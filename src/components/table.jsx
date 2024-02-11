@@ -6,13 +6,13 @@ export default function Tableau() {
   // console.log(colomuns);
 
   return (
-    <div className="">
+    <>
         <table className="table-auto">
-            <thead>
-                <tr>
+            <thead className="border">
+                <tr className="flex space-x-28 p-3">
                   {
                     colomuns.map((colmun, index) =>(
-                      <th key={index}>{colmun}</th>
+                      <th className="" key={index}>{colmun}</th>
                     ))
                   }
                   <th>Action</th>
@@ -22,12 +22,11 @@ export default function Tableau() {
                 <tr>
                   {
                     records.map((row, index) =>(
-                      <tr key={index}>
-                        <td >{row.id}</td>
-                        <td >{row.name}</td>
-                        <td >{row.username}</td>
-                        <td >{row.email}</td>
-                        <td>update / delete</td>
+                      <tr className="border  m-2" key={index}>
+                        <td className="p-2">{row.id}</td>
+                        <td className="p-2">{row.name}</td>
+                        <td className="p-2">{row.email}</td>
+                        <td className="p-2">update / delete</td>
                       </tr>
                       
                     ))
@@ -36,6 +35,6 @@ export default function Tableau() {
             </tbody>
         </table>
         
-    </div>
+    </>
   )
 }
