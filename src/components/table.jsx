@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { ContextApp } from "../App"
+import { Link } from "react-router-dom"
 
 export default function Tableau() {
   const {colomuns, records} = useContext(ContextApp)
@@ -7,6 +8,9 @@ export default function Tableau() {
 
   return (
     <>
+    <div className="mb-6">
+        <Link className="rounded-ful bg-sky-500 p-2 rounded text-white" to={"/create"}>Add +</Link>
+    </div>
         <table className="table-auto">
             <thead className="border">
                 <tr className="flex space-x-28 p-3">

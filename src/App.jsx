@@ -3,6 +3,7 @@ import './App.css'
 import Table from './components/table'
 import axios from 'axios'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Add from './components/add'
 
 export const ContextApp = createContext(null)
 
@@ -29,6 +30,8 @@ function App() {
       <ContextApp.Provider value={{colomuns, setColumuns, records, setRecords}}>
           <Routes>
             <Route path='/' element={<Table />} />
+            <Route path='/create' element={<Add />} />
+
           </Routes>
       </ContextApp.Provider >
     </BrowserRouter>
